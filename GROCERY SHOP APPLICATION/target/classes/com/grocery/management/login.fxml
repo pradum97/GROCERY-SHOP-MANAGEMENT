@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: rgb(255,255,255);"
+      xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.grocery.management.Login">
+
+    <VBox maxHeight="700" maxWidth="500.0" prefHeight="518.0" prefWidth="565.0"
+          style="-fx-background-color: #ffffff; -fx-effect: dropshadow(gaussian,
+          rgb(0.0, 0.0, 0.15), 4.0, 0.4, 0.0,1.5);
+          -fx-background-radius: 4; -fx-border-radius: 4; -fx-padding: 8;">
+
+        <StackPane style="-fx-background-color: white" maxWidth="600.0" prefHeight="502.0" VBox.vgrow="ALWAYS">
+
+            <VBox style="-fx-background-color: white" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" spacing="50">
+
+               <VBox alignment="CENTER" spacing="10">
+                   <Label />
+                   <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="185.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+                       <Image url="@drawable/person_ic.png" />
+                   </ImageView>
+                   <Label style="-fx-font-weight: bold" text="ADMIN LOGIN" />
+               </VBox>
+
+                <GridPane>
+
+                    <VBox alignment="CENTER" spacing="20">
+
+                        <VBox>
+                            <Label text="Enter Email" />
+                            <TextField fx:id="email_f" maxWidth="316.0" minWidth="235.0" prefHeight="54.0" prefWidth="316.0" promptText="Enter Email" style="-fx-background-color: white; -fx-border-width: 1.7;                                        -fx-border-color: transparent transparent red transparent; " text="sanoj@gmail.com" />
+
+                        </VBox>
+
+                        <VBox>
+                            <Label text="Enter Password" />
+                            <PasswordField fx:id="pass" maxWidth="316.0" minWidth="235.0" prefHeight="54.0" prefWidth="316.0"
+                                           promptText="Enter password" style="-fx-background-color: white; -fx-border-width: 1.7;                                             -fx-border-color: transparent transparent red transparent; " text="12345" />
+
+                        </VBox>
+
+                        <HBox layoutX="75.0" layoutY="244.0" prefHeight="31.0" prefWidth="316.0">
+
+                            <CheckBox alignment="CENTER_LEFT" prefHeight="31.0" prefWidth="171.0" text="Keep me logged in" visible="false" />
+
+                            <Button alignment="CENTER_RIGHT" onAction="#forget_password_bn" prefHeight="26.0" prefWidth="145.0" style=" -fx-cursor: hand;-fx-background-color: white;" text="Forget Password" textAlignment="CENTER" textFill="#000000" />
+
+                        </HBox>
+
+                        <Button layoutX="185.0" layoutY="286.0" lineSpacing="1.0"
+                                onAction="#login_bn" prefHeight="26.0" prefWidth="143.0" style=" -fx-cursor: hand;-fx-background-color: #2196f3;" text="Login" textFill="WHITE" />
+
+                        <VBox alignment="CENTER">
+
+                            <Label fx:id="message_label" style="-fx-font-size: 15" textFill="red" />
+
+                        </VBox>
+
+                        <Button alignment="CENTER" layoutX="168.0" layoutY="330.0"
+                                onAction="#create_new_account" style="-fx-background-color:
+                                 transparent; -fx-cursor: hand; -fx-font-size: 15" text="Don't have an Account? Click Here" textAlignment="CENTER" textFill="BLACK">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin></Button>
+
+
+
+                    </VBox>
+               <columnConstraints>
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+               </rowConstraints>
+
+                </GridPane>
+
+            </VBox>
+
+        </StackPane>
+
+    </VBox>
+
+
+</VBox>

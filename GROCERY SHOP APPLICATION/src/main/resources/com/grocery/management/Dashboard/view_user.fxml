@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity" styleClass="product-page" xmlns="http://javafx.com/javafx/11.0.2"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.grocery.management.Controller.ViewUser">
+    <children>
+        <HBox alignment="CENTER_RIGHT" prefHeight="43.0" prefWidth="704.0">
+
+            <Button onAction="#Add_Users" alignment="CENTER" maxHeight="40.0"
+                    minHeight="35.0" prefHeight="35.0" prefWidth="177.0" styleClass="addProductBtn" text="+    ADD USER">
+            <HBox.margin>
+               <Insets bottom="20.0" right="30.0" top="20.0" />
+            </HBox.margin>
+            <padding>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding></Button>
+
+        </HBox>
+
+        <TableView fx:id="user_table_view" VBox.vgrow="ALWAYS" AnchorPane.leftAnchor="10.0">
+            <columns>
+                <TableColumn fx:id="col_id" prefWidth="35" reorderable="false" resizable="false" styleClass="table-column" text="ID" />
+                <TableColumn fx:id="col_fullName" prefWidth="140" reorderable="false" resizable="false" styleClass="table-column" text="FULL NAME" />
+                <TableColumn fx:id="col_gender" prefWidth="65" reorderable="false" resizable="false" styleClass="table-column" text="GENDER" />
+                <TableColumn fx:id="col_dob" prefWidth="100.0" reorderable="false" resizable="false" styleClass="table-column" text="DOB" />
+                <TableColumn fx:id="col_username" prefWidth="120" reorderable="false" resizable="false" styleClass="table-column" text="USERNAME" />
+                <TableColumn fx:id="col_email" minWidth="180.0" prefWidth="-1.0" reorderable="false" resizable="false" styleClass="table-column" text="EMAIL" />
+                <TableColumn fx:id="col_phone" prefWidth="128.60003662109375" reorderable="false" resizable="false" styleClass="table-column" text="PHONE" />
+                <TableColumn fx:id="col_role" prefWidth="93.800048828125" reorderable="false" resizable="false" styleClass="table-column" text="ROLE" />
+                <TableColumn fx:id="col_createtime" prefWidth="138.2000732421875" reorderable="false" resizable="false" styleClass="table-column" text="CREATE TIME" />
+                <TableColumn fx:id="col_address" prefWidth="106.0" reorderable="false" resizable="false" styleClass="table-column" text="ADDRESS" />
+                <TableColumn fx:id="editCol" maxWidth="125.0" prefWidth="125.0" reorderable="false" resizable="false" style="-fx-alignment: center;" styleClass="table-column" text="Action" />
+            </columns>
+        </TableView>
+
+    </children>
+</VBox>

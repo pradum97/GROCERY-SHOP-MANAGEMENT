@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane prefHeight="700.0" prefWidth="559.0" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.grocery.management.Controller.UpdateProduct">
+
+    <ScrollPane fitToWidth="true" prefHeight="642.0" prefWidth="519.0" style="-fx-background-color:transparent;">
+        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="550.0" spacing="20.0">
+
+            <VBox alignment="CENTER" prefHeight="600.0" prefWidth="497.0" spacing="10.0" VBox.vgrow="ALWAYS">
+
+
+                <VBox spacing="5">
+                    <Label text="Enter Product Title :">
+                        <VBox.margin>
+                            <Insets left="5.0" />
+                        </VBox.margin>
+                    </Label>
+                    <TextArea fx:id="product_title" prefHeight="69.0" prefWidth="510.0" promptText="Enter Product Title :" />
+                </VBox>
+
+
+                <HBox alignment="CENTER" spacing="10">
+
+                    <VBox spacing="5">
+                        <Label text="Enter Price :">Enter Price :</Label>
+                        <TextField fx:id="product_price" alignment="CENTER" prefHeight="40" prefWidth="510.0" promptText="Enter Price :" />
+                    </VBox>
+
+                </HBox>
+
+
+                <HBox alignment="CENTER" spacing="10">
+
+                    <VBox spacing="5">
+                        <Label>Choose Categories :</Label>
+                        <ComboBox fx:id="product_categories" prefHeight="40" prefWidth="300" promptText="Choose Category :" />
+                    </VBox>
+
+                    <VBox spacing="5">
+                        <Label text="Choose sub category :">Choose :</Label>
+                        <ComboBox fx:id="subCategory" prefHeight="40" prefWidth="300" promptText="Choose sub category :" />
+                    </VBox>
+
+                </HBox>
+
+                <HBox alignment="CENTER" spacing="5">
+
+
+                    <VBox spacing="5">
+                        <Label text="Quantity  :">Quantity :</Label>
+                        <TextField fx:id="product_quantity" alignment="CENTER" prefHeight="40" prefWidth="400" promptText="Quantity :" />
+                    </VBox>
+                    <VBox spacing="5">
+                        <Label />
+                        <ComboBox fx:id="unitType" prefHeight="40" prefWidth="200" />
+                    </VBox>
+
+
+                </HBox>
+
+
+
+                <VBox spacing="5">
+                    <Label text="Enter Description :">Enter Description :</Label>
+                    <TextArea fx:id="product_description" prefHeight="80" promptText="Enter Quantity :" />
+                </VBox>
+
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                    <children>
+
+
+                        <ImageView fx:id="product_image" fitHeight="85.0" fitWidth="90.0">
+                            <Image url="@../drawable/img_preview.png" />
+
+                        </ImageView>
+                    </children>
+                </HBox>
+
+
+            </VBox>
+        <HBox alignment="BOTTOM_CENTER" spacing="70.0">
+            <children>
+
+                <Button fx:id="uploadImage_bn" alignment="CENTER" onAction="#uploadImage_bn" prefHeight="26.0" prefWidth="148.0" style="-fx-background-color: #c506fa; -fx-cursor: hand; -fx-font-weight: BOLD;" text="UPLOAD IMAGE" textAlignment="CENTER" textFill="#fafcfb" />
+
+                <Button fx:id="submit_bn" alignment="CENTER" lineSpacing="2.0" onAction="#submit_bn" prefHeight="26.0" prefWidth="184.0" style="-fx-background-color: #0881ea;                  -fx-font-weight: BOLD;" text="UPDATE" textAlignment="CENTER" textFill="#fafcfb" />
+            </children>
+        </HBox>
+
+        </VBox>
+      <padding>
+         <Insets left="15.0" right="15.0" />
+      </padding>
+    </ScrollPane>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="25.0" />
+   </padding>
+
+</StackPane>

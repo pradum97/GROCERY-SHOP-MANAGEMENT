@@ -1,0 +1,92 @@
+.context-menu {
+    -fx-background-color: #ff0000;
+    -fx-border-color: #f10707;
+    -fx-text-fill: white;
+}
+
+
+.menu-item:focused .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.menu-item:focused {
+    -fx-background: -fx-accent;
+    -fx-background-color: #f10707;
+    -fx-text-fill: -fx-selection-bar-text;
+}
+
+.search-box{
+    -fx-text-box-border: #c41af3;
+    -fx-border-style: solid;
+    -fx-border-width: 2px;
+    -fx-border-color: transparent transparent #ea0f0f transparent;
+    -fx-focus-color: none;
+    -fx-background-color: transparent;
+}
+.container{
+    -fx-background-color: rgba(255, 255, 255, 0.49);
+}
+.side-menu{
+    -fx-background-color: rgba(93, 94, 92, 0.94);
+}
+
+.header-menu{
+    -fx-background-color: rgba(93, 94, 92, 0.94);
+}
+
+#product_find_tf{
+    -fx-text-box-border: transparent;
+    -fx-border-style: solid;
+    -fx-border-width: 0px;
+    -fx-border-color: transparent transparent #f1efef transparent;
+    -fx-focus-color: none;
+    -fx-background-color: transparent;
+    -fx-text-inner-color: #0c0000;
+    -fx-font-weight: bold;
+    -fx-prompt-text-fill: #a8a5a5;
+}
+
+.product-page,.tableview{
+    -fx-pref-width: 80pc;
+    -fx-min-width: 10pc;
+    -fx-pref-height: 60pc;
+    -fx-min-height: 10pc;
+}
+
+.addProductBtn{
+    -fx-background-color: #0881ea;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+    -fx-border-color: rgba(76, 158, 187, 0);
+    -fx-underline: false;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-column{
+
+    -fx-alignment: CENTER;
+    -fx-wrap-text: true;
+}
+
+#col_id,#col_role{
+
+    -fx-alignment: CENTER;
+    -fx-padding: 0.5em;
+    -fx-font: 13px "Arial";
+    -fx-text-fill: #000000;
+
+}
+
+#home_bn,#myProfile_bn,
+#myProducts_bn,#sellProduct_bn,#viewUsers,
+#viewReport_bn{
+
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-font-size: 14;
+}

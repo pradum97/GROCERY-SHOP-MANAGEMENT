@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER"  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="product-page" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.grocery.management.Controller.MyProduct">
+
+
+    <HBox alignment="CENTER" fillHeight="false" spacing="50">
+
+        <HBox fx:id="refresh_bn" alignment="CENTER" onMouseClicked="#refresh_bn" style=" -fx-cursor: hand;-fx-background-color: #0881ea; -fx-background-radius: 5;">
+            <ImageView fx:id="refresh_img" fitHeight="15.0" fitWidth="15.0" onMouseClicked="#refresh_bn" />
+
+            <Button alignment="CENTER" onMouseClicked="#refresh_bn" style="-fx-background-color: transparent" text="REFRESH" textFill="WHITE" />
+
+            <padding>
+                <Insets left="20.0" right="20.0" />
+            </padding>
+        </HBox>
+
+        <HBox alignment="CENTER" fillHeight="false" prefHeight="30.0" style="-fx-background-color: red; -fx-background-radius: 5;" VBox.vgrow="ALWAYS">
+
+            <Label alignment="CENTER" style="-fx-background-color: transparent; -fx-text-fill: white;" text="ALL PRODUCTS">All Products
+            </Label>
+            <padding>
+                <Insets left="20.0" right="20.0" />
+            </padding>
+
+        </HBox>
+
+
+        <HBox alignment="CENTER" fillHeight="false" style="-fx-border-color: transparent transparent #858383 transparent;          -fx-border-width: 2px">
+
+            <ImageView fitHeight="22.0" fitWidth="22.0">
+                <Image url="@../drawable/Icon/search_icon.png" />
+            </ImageView>
+
+            <TextField fx:id="product_find_tf" alignment="CENTER" prefHeight="42.0" prefWidth="200.0" promptText="Find Product . . .">
+                <HBox.margin>
+                    <Insets right="40.0" />
+                </HBox.margin>
+            </TextField>
+            <HBox.margin>
+                <Insets right="20.0" />
+            </HBox.margin>
+
+        </HBox>
+
+        <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+        </VBox.margin>
+
+    </HBox>
+    <HBox prefWidth="900" VBox.vgrow="ALWAYS">
+        <TableView fx:id="product_table_view" HBox.hgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="col_id" prefWidth="35" reorderable="false" resizable="false"
+                             styleClass="table-column" text="ID"/>
+                <TableColumn fx:id="col_title" minWidth="200" reorderable="false" resizable="false"
+                             styleClass="table-column" text="TITLE"/>
+                <TableColumn fx:id="col_price" prefWidth="65" reorderable="false" resizable="false"
+                             styleClass="table-column" text="PRICE (RS)"/>
+                <TableColumn fx:id="col_category" prefWidth="150.0" reorderable="false" resizable="false"
+                             styleClass="table-column" text="CATEGORIES"/>
+                <TableColumn fx:id="col_subcategory" prefWidth="150.0" reorderable="false" resizable="false"
+                             styleClass="table-column" text="SUB-CATEGORIES"/>
+                <TableColumn fx:id="col_quantity" minWidth="100.0" prefWidth="-1.0" reorderable="false"
+                             resizable="false" styleClass="table-column" text="QUANTITY"/>
+                <TableColumn fx:id="col_unit" minWidth="80.0" prefWidth="-1.0" reorderable="false" resizable="false"
+                             styleClass="table-column" text="UNIT"/>
+                <TableColumn fx:id="col_categoryId" prefWidth="81.0" reorderable="false" resizable="false"
+                             styleClass="table-column" text="C-ID"/>
+                <TableColumn fx:id="col_user_id" prefWidth="81" reorderable="false" resizable="false"
+                             styleClass="table-column" text="UID"/>
+                <TableColumn fx:id="col_action" styleClass="table-column" text="ACTION"/>
+            </columns>
+        </TableView>
+    </HBox>
+
+</VBox>

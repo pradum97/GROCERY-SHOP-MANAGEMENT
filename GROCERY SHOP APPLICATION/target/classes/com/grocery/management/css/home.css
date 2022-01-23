@@ -1,0 +1,87 @@
+*{
+    -fx-start-margin: 0;
+    -fx-end-margin: 0;
+    -fx-padding: 0;
+}
+.container{
+    -fx-background-color: rgba(255, 255, 255, 0.49);
+}
+.side-menu{
+    -fx-background-color: rgba(93, 94, 92, 0.94);
+}
+
+.header-menu{
+    -fx-background-color: rgba(93, 94, 92, 0.94);
+}
+.search-box{
+    -fx-text-box-border: transparent;
+    -fx-border-style: solid;
+    -fx-border-width: 2px;
+    -fx-border-color: transparent transparent #ea0f0f transparent;
+    -fx-focus-color: none;
+    -fx-background-color: transparent;
+}
+.side-menu-option{
+    -fx-underline:false;
+    -fx-border-color: transparent transparent #ffffff transparent ;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+    -fx-background-color: rgba(147, 243, 227, 0.92);
+}
+.side-menu-option:hover{
+    -fx-background-color: #e3bebe;
+}
+
+.side-menu-option:focused{
+    -fx-background-color: #ffffff;
+    -fx-border-color: transparent transparent transparent red;
+    -fx-border-style: solid;
+    -fx-border-width: 3px;
+}
+
+
+
+#ContentContainer{
+    /*-fx-background-color: red;*/
+    -fx-pref-width: 100%;
+    -fx-pref-height: 650px;
+    -fx-min-width: 100%;
+    -fx-min-height: 100px;
+}
+/*---------------------mix page css---------------------------*/
+.homeContainer,.home-page,.home_container{
+    -fx-pref-width: 85pc;
+    -fx-min-width: 10pc;
+    -fx-pref-height: 60pc;
+    -fx-min-height: 10pc;
+}
+
+/*---------------------------------------home css----------------------------------------*/
+.home-header {
+    -fx-pref-width: 100pc;
+    -fx-pref-height: 8pc;
+    -fx-spacing: 20;
+    -fx-padding: 2pc;
+    -fx-background-color: white;
+}
+.box{
+    -fx-background-color: #aac4e5;
+    -fx-pref-width: 250px;
+    -fx-pref-height: 150px;
+    -fx-max-width: 250px;
+    -fx-max-height: 180px;
+    -fx-min-height: 10px;
+    -fx-min-width: 10px;
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.chart-box-container{
+    -fx-padding: 1pc;
+    -fx-background-color: white;
+}
+
+

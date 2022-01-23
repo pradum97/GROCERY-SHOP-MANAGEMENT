@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.grocery.management.Controller.UpdateQuantity">
+    <top>
+        <HBox alignment="CENTER" prefHeight="54.0" prefWidth="600.0" style="-fx-background-color: red;" BorderPane.alignment="CENTER">
+            <Label style="-fx-text-fill: white; -fx-font-weight: bold;" text="UPDATE" />
+        </HBox>
+    </top>
+    <center>
+        <StackPane prefHeight="358.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <VBox alignment="CENTER" fillWidth="false" prefHeight="200.0" prefWidth="100.0" spacing="30.0" StackPane.alignment="CENTER">
+
+                <VBox alignment="CENTER" prefHeight="188.0" prefWidth="214.0" spacing="10.0">
+                    <HBox alignment="CENTER_LEFT">
+                        <Label style="-fx-font-size: 13;" text="Title : " textAlignment="CENTER" />
+                        <Label fx:id="title_l" alignment="CENTER" textAlignment="CENTER"  />
+                    </HBox>
+
+
+                    <HBox spacing="5">
+
+                        <Label style="-fx-font-size: 15;" text="Price :" textAlignment="CENTER" />
+                        <Label fx:id="price_l" alignment="CENTER" style="-fx-font-size: 15;" textAlignment="CENTER" />
+                    </HBox>
+                    <HBox layoutX="10.0" layoutY="38.0" spacing="5">
+                        <Label style="-fx-background-size: 14;" text="Available Quantity : " textAlignment="CENTER" />
+                        <Label fx:id="total_Quantity_l" alignment="CENTER" style="-fx-font-size: 15;" textAlignment="CENTER" />
+                    </HBox>
+
+                    <VBox>
+
+
+                        <VBox>
+
+                            <HBox>
+                                <Label text="Enter Quantity : " />
+                                <Label fx:id="q_hint" />
+                            </HBox>
+                        </VBox>
+
+                        <HBox>
+
+                            <TextField fx:id="quantity_tf" prefHeight="38.0" prefWidth="130.0" promptText="Enter Quantity :" style=" -fx-border-color: black transparent black transparent;-fx-border-width: 1" />
+
+                            <ComboBox fx:id="unitType" prefHeight="38.0" style="-fx-background-color: transparent;                             -fx-border-width: 1;                             -fx-border-color: black black black transparent" />
+
+                        </HBox>
+
+                    </VBox>
+
+                    <VBox layoutX="10.0" layoutY="123.0">
+                        <children>
+                            <VBox>
+                                <children>
+                                    <HBox>
+                                        <children>
+                                            <Label text="Enter Discount ( % ): " />
+                                        </children>
+                                    </HBox>
+                                </children>
+                            </VBox>
+                            <HBox>
+                                <children>
+                                    <TextField fx:id="discount_tf" prefHeight="38.0" prefWidth="183.0" promptText="Enter Discount ( % ) :" style=" -fx-border-color: black transparent black transparent;-fx-border-width: 1" text="0" />
+                                </children>
+                            </HBox>
+                        </children>
+                    </VBox>
+
+                </VBox>
+            </VBox>
+        </StackPane>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="47.0" prefWidth="600.0" spacing="70.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" onAction="#updateProduct_bn" prefHeight="27.0" prefWidth="147.0" style="-fx-cursor: hand;-fx-background-color: #f10707; -fx-text-fill: WHITE;                          -fx-font-weight: BOLD; -fx-border-color: #f10707" text="UPDATE" />
+            </children>
+        </HBox>
+    </bottom>
+
+</BorderPane>

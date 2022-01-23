@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane style="-fx-background-color: #008080" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.grocery.management.Controller.Home">
+   <top>
+      <HBox alignment="CENTER" prefHeight="74.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #c0bfbf; -fx-border-color: red; -fx-border-width: 2;">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="82.0" style="-fx-font-weight: bold; -fx-text-fill: white;" text="TOTAL USERS" textAlignment="CENTER" />
+                        <Label fx:id="totalUser" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="18.0" prefWidth="82.0" style="-fx-font-size: 15; -fx-font-weight: bold; -fx-text-fill: white;" textAlignment="CENTER" />
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+
+                      <Image url="@drawable/person_ic.png" />
+
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="15.0" layoutY="15.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #c0bfbf; -fx-border-color: red; -fx-border-width: 2;">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="82.0" style="-fx-font-weight: bold; -fx-text-fill: white;" text="CATEGORIES" textAlignment="CENTER" />
+                        <Label fx:id="totalCategory" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="18.0" prefWidth="82.0" style="-fx-font-size: 15; -fx-font-weight: bold; -fx-text-fill: white;" textAlignment="CENTER" />
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@drawable/Icon/category_ic.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="222.0" layoutY="15.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #c0bfbf; -fx-border-color: red; -fx-border-width: 2;">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="118.0" style="-fx-font-weight: bold; -fx-text-fill: white;" text="SUB - CATEGORIES" textAlignment="CENTER" VBox.vgrow="ALWAYS" />
+                        <Label fx:id="sub_Category" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="18.0" prefWidth="82.0" style="-fx-font-size: 15; -fx-font-weight: bold; -fx-text-fill: white;" textAlignment="CENTER" />
+                     </children>
+                  </VBox>
+                   <ImageView fx:id="sub_c_icon" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                       <Image url="@drawable/Icon/sub_category.png" />
+                   </ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="220.0" layoutY="15.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #c0bfbf; -fx-border-width: 2; -fx-border-color: red;">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="82.0" style="-fx-font-weight: bold; -fx-text-fill: white;" text="PRODUCTS" textAlignment="CENTER" />
+                        <Label fx:id="totalProduct" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="18.0" prefWidth="82.0" style="-fx-font-size: 15; -fx-font-weight: bold; -fx-text-fill: white;" textAlignment="CENTER" />
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@drawable/Icon/product_ic.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></HBox>
+   </top>
+
+
+    <center>
+        <StackPane alignment="TOP_CENTER" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="23.0" prefWidth="160.0" style="-fx-font-size: 17; -fx-font-weight: BOLD; -fx-text-fill: white; -fx-border-color: transparent transparent black transparent;" text="SALES REPORTS" textAlignment="CENTER" />
+
+                   <HBox alignment="CENTER" prefHeight="68.0" prefWidth="600.0" style="-fx-background-color: #008080;" BorderPane.alignment="CENTER">
+                       <children>
+                           <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="68.0" prefWidth="238.0">
+                               <children>
+                                   <Label style="-fx-font-size: 14; -fx-font-weight: BOLD; -fx-text-fill: WHITE;" text="LIMIT : " />
+                                   <ComboBox fx:id="limit_com" prefWidth="100.0" promptText="LIMIT" />
+                               </children>
+                           </HBox>
+                           <HBox alignment="CENTER_LEFT" prefHeight="68.0" prefWidth="238.0">
+                               <children>
+                                   <Label style="-fx-font-size: 14; -fx-font-weight: BOLD; -fx-text-fill: WHITE;" text="FROM" />
+                                   <DatePicker fx:id="from_date" editable="false" prefHeight="35.0" prefWidth="170.0">
+                                       <HBox.margin>
+                                           <Insets left="10.0" />
+                                       </HBox.margin>
+                                   </DatePicker>
+                               </children>
+                           </HBox>
+                           <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="68.0" prefWidth="238.0">
+                               <children>
+                                   <Label style="-fx-font-size: 14; -fx-font-weight: BOLD; -fx-text-fill: WHITE;" text="TO" />
+                                   <DatePicker fx:id="to_Date" editable="false" prefHeight="35.0" prefWidth="170.0">
+                                       <HBox.margin>
+                                           <Insets left="10.0" />
+                                       </HBox.margin>
+                                   </DatePicker>
+                               </children>
+                               <HBox.margin>
+                                   <Insets left="5.0" />
+                               </HBox.margin>
+                           </HBox>
+                           <Button alignment="CENTER" mnemonicParsing="false" onAction="#search_bn" prefHeight="26.0" prefWidth="85.0" style="-fx-cursor: hand;-fx-background-color: BLUE; -fx-text-fill: WHITE; -fx-font-weight: BOLD;" text="SEARCH" textAlignment="CENTER" />
+                           <Button alignment="CENTER" layoutX="508.0" layoutY="31.0" mnemonicParsing="false" onAction="#reset_bn" prefHeight="26.0" prefWidth="85.0" style="-fx-cursor: hand;-fx-background-color: RED; -fx-text-fill: WHITE; -fx-font-weight: BOLD;" text="RESET" textAlignment="CENTER">
+                               <HBox.margin>
+                                   <Insets left="30.0" />
+                               </HBox.margin>
+                           </Button>
+                       </children>
+                     <VBox.margin>
+                        <Insets top="8.0" />
+                     </VBox.margin>
+                   </HBox>
+
+                      <TableView fx:id="table_view" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                          <columns>
+                              <TableColumn fx:id="col_sno" prefWidth="75.0" text="S.NO" />
+                              <TableColumn fx:id="c_name" prefWidth="100.0" text="C-NAME" />
+                              <TableColumn fx:id="c_phone" prefWidth="85.0" text="C-PHONE" />
+                              <TableColumn fx:id="c_address" prefWidth="150.0" text="C-ADDRESS" />
+                              <TableColumn fx:id="col_p_id" prefWidth="75.0" text="P-ID" />
+                              <TableColumn fx:id="col_p_title" prefWidth="100.0" text="P-TITLE" />
+                              <TableColumn fx:id="col_p_rate" prefWidth="75.0" text="RATE" />
+                              <TableColumn fx:id="col_p_price" prefWidth="75.0" text="PRICE" />
+                              <TableColumn fx:id="col_p_category" prefWidth="120.0" text="CATEGORY" />
+                              <TableColumn fx:id="col_p_sub_category" prefWidth="120.0" text="SUB-CATEGORY" />
+                              <TableColumn fx:id="col_p_seller_name" prefWidth="120.0" text="SELLER NAME" />
+                              <TableColumn fx:id="col_p_date" prefWidth="200.0" text="DATE" />
+                          </columns>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                      </TableView>
+               </children>
+            </VBox>
+            </children>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+        </StackPane>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="64.0" prefWidth="600.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER" style="-fx-border-color: red;">
+                    <children>
+                        <Label prefHeight="20.0" prefWidth="101.0" style="-fx-text-fill: BLUE; -fx-font-weight: bold; -fx-font-size: 14;" text="TOTAL ITEMS : " />
+                        <Label fx:id="total_items" layoutX="65.0" layoutY="31.0" prefHeight="18.0" style="-fx-text-fill: BLUE; -fx-font-weight: bold; -fx-font-size: 14;">
+                            <HBox.margin>
+                                <Insets left="5.0" right="8.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                    <HBox.margin>
+                        <Insets bottom="10.0" right="50.0" top="10.0" />
+                    </HBox.margin>
+                    <padding>
+                        <Insets left="15.0" />
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" layoutX="244.0" layoutY="10.0" prefHeight="43.0" style="-fx-border-color: red;">
+                    <children>
+                        <Label prefHeight="20.0" prefWidth="102.0" style="-fx-text-fill: RED; -fx-font-weight: bold; -fx-font-size: 14;" text="TOTAL PRICE : " />
+                        <Label fx:id="total_price" layoutX="65.0" layoutY="31.0" prefHeight="20.0" style="-fx-text-fill: RED; -fx-font-weight: bold; -fx-font-size: 14;">
+                            <HBox.margin>
+                                <Insets left="3.0" right="5.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                    <HBox.margin>
+                        <Insets bottom="10.0" right="30.0" top="10.0" />
+                    </HBox.margin>
+                    <padding>
+                        <Insets left="15.0" right="10.0" />
+                    </padding>
+                </HBox>
+            </children></HBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.grocery.management.Controller.CustomerDetails">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="58.0" prefWidth="600.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button maxHeight="31.0" mnemonicParsing="false" onAction="#cancel_Bn" prefHeight="31.0" prefWidth="125.0" style="-fx-cursor: hand;-fx-background-color: RED; -fx-text-fill: WHITE; -fx-font-size: 13; -fx-font-weight: bold;" text="CANCEL" />
+            <Button layoutX="229.0" layoutY="24.0" maxHeight="31.0" mnemonicParsing="false" onAction="#submit_bn" prefHeight="31.0" prefWidth="125.0" style="-fx-cursor: hand;-fx-background-color: BLUE; -fx-text-fill: WHITE; -fx-font-size: 13; -fx-font-weight: bold;" text="SUBMIT" />
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" StackPane.alignment="CENTER">
+               <StackPane.margin>
+                  <Insets bottom="20.0" />
+               </StackPane.margin>
+               <children>
+                  <VBox fillWidth="false" prefHeight="283.0" prefWidth="350.0" spacing="10.0">
+                     <VBox alignment="CENTER_LEFT" prefHeight="82.0" prefWidth="550.0" spacing="5.0" VBox.vgrow="ALWAYS">
+                        <VBox.margin>
+                           <Insets top="5.0" />
+                        </VBox.margin>
+                        <Label style="-fx-font-size: 15; -fx-text-fill: black;" text="Name : " />
+                        <TextField fx:id="c_name" prefHeight="40.0" prefWidth="550.0" promptText="Enter Customer Name  " text="Pradum Kumar" />
+                     </VBox>
+                     <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="30.0" prefHeight="48.0" prefWidth="550.0" spacing="5.0" VBox.vgrow="ALWAYS">
+                        <Label style="-fx-font-size: 15; -fx-text-fill: black;" text="Phone : " />
+                        <TextField fx:id="c_phone" prefHeight="40.0" prefWidth="550.0" promptText="Enter Customer Phone" text="9608461591" />
+                     </VBox>
+                     <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="78.0" prefHeight="48.0" prefWidth="550.0" spacing="5.0" VBox.vgrow="ALWAYS">
+                        <Label style="-fx-font-size: 15; -fx-text-fill: black;" text="Address : " />
+                        <TextField fx:id="c_address" prefHeight="60.0" prefWidth="270.0" promptText="Enter Customer Address " text="Lakhisarai" />
+                     </VBox>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+   </center>
+   <top>
+      <Pane prefHeight="39.0" prefWidth="550.0" style="-fx-background-color: #c506fa;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="39.0" prefWidth="500.0">
+               <Label alignment="CENTER" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 15;" text="ENTER CUSTOMER DETAILS" />
+            </HBox>
+         </children>
+      </Pane>
+   </top>
+</BorderPane>
