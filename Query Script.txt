@@ -1,5 +1,6 @@
 
-// [1] USER REGISTRATION Table Create
+
+/// [1] USER REGISTRATION Table Create
 
 CREATE TABLE users(
 ID BIGINT NOT NULL AUTO_INCREMENT primary KEY,
