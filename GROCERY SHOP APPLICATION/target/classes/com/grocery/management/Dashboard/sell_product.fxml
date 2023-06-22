@@ -13,7 +13,10 @@
 
             <HBox alignment="CENTER" fillHeight="false" spacing="50">
 
-                <HBox fx:id="refresh_bn" alignment="CENTER" fillHeight="false" onMouseClicked="#refresh_bn" prefHeight="36.0" prefWidth="119.0" style=" -fx-cursor: hand;-fx-background-color: #0881ea; -fx-background-radius: 5;">
+                <HBox fx:id="refresh_bn" alignment="CENTER" fillHeight="false"
+                      onMouseClicked="#refresh_bn" prefHeight="36.0" prefWidth="119.0"
+                      style=" -fx-cursor: hand;-fx-background-color: #0881ea;
+                       -fx-background-radius: 5;">
                     <ImageView fx:id="refresh_img" fitHeight="15.0" fitWidth="15.0" onMouseClicked="#refresh_bn" />
 
                     <Button alignment="CENTER" onMouseClicked="#refresh_bn" style="-fx-background-color: transparent" text="REFRESH" textFill="WHITE" />

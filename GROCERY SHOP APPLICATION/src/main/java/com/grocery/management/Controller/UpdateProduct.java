@@ -104,7 +104,7 @@ public class UpdateProduct implements Initializable {
                 unitType.getItems().add(unit);
                 unitType.getSelectionModel().selectFirst();
 
-                InputStream is = new FileInputStream(new File(product_Image).getAbsolutePath());
+                InputStream is = new FileInputStream(new File("src/main/resources/Product_Image/"+product_Image).getAbsolutePath());
                 Image image = new Image(is);
                 product_image.setImage(image);
                 is.close();
@@ -126,7 +126,6 @@ public class UpdateProduct implements Initializable {
             if (null != connection) {
 
                 try {
-
                     connection.close();
                     ps.close();
                     resultSet.close();
@@ -321,11 +320,11 @@ public class UpdateProduct implements Initializable {
                 String fileName = "p_image" + System.currentTimeMillis();
                 String imgPath = method.copyImage(image_path, fileName);
 
-                File file = new File(product_Image);
+                File file = new File("src/main/resources/Product_Image/"+product_Image);
+
                 if (file.exists()) {
                     FileUtils.forceDelete(file);
                 }
-
 
                 ps.setString(4, imgPath);
             }

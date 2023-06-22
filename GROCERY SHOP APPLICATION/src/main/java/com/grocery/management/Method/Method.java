@@ -71,16 +71,27 @@ public class Method {
 
     public Image getImage(String path){
 
+        InputStream is = null;
+
         try {
 
             File file = new File(path);
-           InputStream is = new FileInputStream(file.getAbsolutePath());
+            is = new FileInputStream(file.getAbsolutePath());
 
 
            return new Image(is);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             return null;
+        }finally {
+
+            try {
+                if (null != is) {
+                    is.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -170,7 +181,7 @@ public class Method {
         try {
 
             Path path = Files.copy(sourceFile.toPath(), destinationFile.toPath());
-            return path.toFile().getAbsolutePath();
+            return path.toFile().getName();
 
         } catch (IOException e) {
             System.out.println(e.getMessage());

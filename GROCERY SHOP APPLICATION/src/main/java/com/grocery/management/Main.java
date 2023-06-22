@@ -32,7 +32,6 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.show();
     }
-
     public void changeScene(String fxml, String title) {
 
         try {
@@ -42,6 +41,7 @@ public class Main extends Application {
                 Parent pane = FXMLLoader.load(getClass().getResource(fxml));
                 primaryStage.getScene().setRoot(pane);
                 primaryStage.setTitle(Method.APPLICATION_NAME + " ( " + title + " ) ");
+                primaryStage.show();
 
             }
 

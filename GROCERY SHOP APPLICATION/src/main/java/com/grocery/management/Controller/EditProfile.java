@@ -142,6 +142,8 @@ public class EditProfile implements Initializable {
             gender_comboBox.setItems(gender_list);
 
 
+
+
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {

@@ -44,6 +44,7 @@ public class MyProduct implements Initializable {
     public HBox refresh_bn;
     public ImageView refresh_img;
     public TextField product_find_tf;
+    public TableColumn col_pImg;
     Method method;
     Dialog dialog;
     Properties properties;
@@ -71,6 +72,7 @@ public class MyProduct implements Initializable {
 
     private void tableSetting() {
 
+
        // product_table_view.setFixedCellSize(45);
         product_table_view.prefHeightProperty().bind(Bindings.size(
                 product_table_view.getItems()).multiply(product_table_view.getFixedCellSize()).add(30));
@@ -94,15 +96,13 @@ public class MyProduct implements Initializable {
                 } else if (person.getSub_category().toLowerCase().contains(lowerCaseFilter)) {
                     return true;
                 }
-                return false; // Does not match.
+                return false;
             });
         });
-
         SortedList<All_Product> sortedData = new SortedList<>(filteredData);
-
         sortedData.comparatorProperty().bind(product_table_view.comparatorProperty());
-
         product_table_view.setItems(sortedData);
+
         tableSetting();
 
     }
@@ -281,7 +281,10 @@ public class MyProduct implements Initializable {
 
                             All_Product delete_selection = product_table_view.
                                     getSelectionModel().getSelectedItem();
-                            Alert alert = new Alert(Alert.AlertType.NONE);
+
+
+                            System.out.println(delete_selection.getProduct_image());
+                            /*Alert alert = new Alert(Alert.AlertType.NONE);
                             alert.setAlertType(Alert.AlertType.CONFIRMATION);
                             alert.setHeaderText("Are you sure you want to delete this item?");
                             alert.initModality(Modality.APPLICATION_MODAL);
@@ -293,7 +296,7 @@ public class MyProduct implements Initializable {
                                 deleteProducts(delete_selection.getProduct_id(),delete_selection.getProduct_image());
                             } else {
                                 alert.close();
-                            }
+                            }*/
                         });
 
 
@@ -313,9 +316,52 @@ public class MyProduct implements Initializable {
 
             return cell;
         };
-        col_action.setCellFactory(cellFoctory);
-        product_table_view.setItems(productList);
 
+        Callback<TableColumn<All_Product, String>, TableCell<All_Product, String>>
+                userImageCellFactory = (TableColumn<All_Product, String> param) -> {
+
+            final TableCell<All_Product, String> cell = new TableCell<All_Product, String>() {
+                @Override
+                public void updateItem(String item, boolean empty) {
+                    super.updateItem(item, empty);
+                    if (empty) {
+                        setGraphic(null);
+                        setText(null);
+
+                    } else {
+                        String userImgPath = productList.get(getIndex()).getProduct_image();
+
+                        ImageView iv = new ImageView();
+                        iv.setFitHeight(45);
+                        iv.setFitWidth(45);
+                        iv.setPreserveRatio(true);
+
+                        if (null != iv){
+                            iv.setImage(null);
+                        }
+
+                        iv.setImage(method.getImage("src/main/resources/Product_Image/"+userImgPath));
+
+                        HBox managebtn = new HBox(iv);
+                        managebtn.setStyle("-fx-alignment:center");
+                        HBox.setMargin(iv, new Insets(2, 2, 0, 3));
+
+                        setGraphic(managebtn);
+
+                        setText(null);
+
+                    }
+                }
+
+            };
+
+            return cell;
+        };
+
+        col_action.setCellFactory(cellFoctory);
+        col_pImg.setCellFactory(userImageCellFactory);
+        
+        product_table_view.setItems(productList);
 
         col_title.setCellFactory(tc -> {
             TableCell<All_Product, String> cell = new TableCell<>();
@@ -331,6 +377,7 @@ public class MyProduct implements Initializable {
 
 
     }
+
 
     private void deleteProducts(int product_id, String product_image) {
         Connection connection = method.connection();
@@ -348,7 +395,7 @@ public class MyProduct implements Initializable {
 
             if (result > 0) {
 
-                File file = new File(product_image);
+                File file = new File("src/main/resources/Product_Image/"+product_image);
                 if (file.exists()) {
                     FileUtils.forceDelete(file);
                 }

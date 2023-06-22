@@ -382,8 +382,6 @@ public class Home implements Initializable {
                 }
             }
         }
-
-
     }
 
     private void countSubCategory() {
